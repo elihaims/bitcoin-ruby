@@ -19,7 +19,7 @@ describe 'Bitcoin::Protocol::PartialMerkleTree' do
       '8276222651209fe1a2c4c0fa1c58510aec8b090dd1eb1f82f9d261b8273b525b',
     ].map(&:htb)
     tree = Bitcoin::P::PartialMerkleTree.new(12, hashes, 'ff1a'.htb)
-    tree.set_value
+    tree.assign_value
 
     tx_hashes = Set.new(tree.tx_hashes)
     # following 6 are leaves (tx_hash) of merkle tree
